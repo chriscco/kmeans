@@ -1,0 +1,831 @@
+{
+    "graphs": [
+        {
+            "id": "group-10-shared-attention-graph",
+            "directed": false,
+            "type": "undirected",
+            "label": "Shared Attention Graph - Group 10",
+            "nodes": {
+                "B": {
+                    "label": "Person B"
+                },
+                "D": {
+                    "label": "Person D"
+                },
+                "A": {
+                    "label": "Person A"
+                },
+                "C": {
+                    "label": "Person C"
+                }
+            },
+            "edges": [
+                {
+                    "source": "B",
+                    "target": "D",
+                    "directed": false,
+                    "relation": "shared_attention_count",
+                    "metadata": {
+                        "weight": 188
+                    }
+                },
+                {
+                    "source": "B",
+                    "target": "A",
+                    "directed": false,
+                    "relation": "shared_attention_count",
+                    "metadata": {
+                        "weight": 504
+                    }
+                },
+                {
+                    "source": "B",
+                    "target": "C",
+                    "directed": false,
+                    "relation": "shared_attention_count",
+                    "metadata": {
+                        "weight": 596
+                    }
+                },
+                {
+                    "source": "D",
+                    "target": "A",
+                    "directed": false,
+                    "relation": "shared_attention_count",
+                    "metadata": {
+                        "weight": 196
+                    }
+                },
+                {
+                    "source": "D",
+                    "target": "C",
+                    "directed": false,
+                    "relation": "shared_attention_count",
+                    "metadata": {
+                        "weight": 180
+                    }
+                },
+                {
+                    "source": "A",
+                    "target": "C",
+                    "directed": false,
+                    "relation": "shared_attention_count",
+                    "metadata": {
+                        "weight": 640
+                    }
+                }
+            ]
+        },
+        {
+            "id": "group-8-shared-attention-graph",
+            "directed": false,
+            "type": "undirected",
+            "label": "Shared Attention Graph - Group 8",
+            "nodes": {
+                "B": {
+                    "label": "Person B"
+                },
+                "D": {
+                    "label": "Person D"
+                },
+                "A": {
+                    "label": "Person A"
+                },
+                "C": {
+                    "label": "Person C"
+                }
+            },
+            "edges": [
+                {
+                    "source": "B",
+                    "target": "D",
+                    "directed": false,
+                    "relation": "shared_attention_count",
+                    "metadata": {
+                        "weight": 1516
+                    }
+                },
+                {
+                    "source": "B",
+                    "target": "A",
+                    "directed": false,
+                    "relation": "shared_attention_count",
+                    "metadata": {
+                        "weight": 2196
+                    }
+                },
+                {
+                    "source": "B",
+                    "target": "C",
+                    "directed": false,
+                    "relation": "shared_attention_count",
+                    "metadata": {
+                        "weight": 1816
+                    }
+                },
+                {
+                    "source": "D",
+                    "target": "A",
+                    "directed": false,
+                    "relation": "shared_attention_count",
+                    "metadata": {
+                        "weight": 2216
+                    }
+                },
+                {
+                    "source": "D",
+                    "target": "C",
+                    "directed": false,
+                    "relation": "shared_attention_count",
+                    "metadata": {
+                        "weight": 1556
+                    }
+                },
+                {
+                    "source": "A",
+                    "target": "C",
+                    "directed": false,
+                    "relation": "shared_attention_count",
+                    "metadata": {
+                        "weight": 2096
+                    }
+                }
+            ]
+        },
+        {
+            "id": "group-6-shared-attention-graph",
+            "directed": false,
+            "type": "undirected",
+            "label": "Shared Attention Graph - Group 6",
+            "nodes": {
+                "B": {
+                    "label": "Person B"
+                },
+                "D": {
+                    "label": "Person D"
+                },
+                "A": {
+                    "label": "Person A"
+                },
+                "C": {
+                    "label": "Person C"
+                }
+            },
+            "edges": [
+                {
+                    "source": "B",
+                    "target": "D",
+                    "directed": false,
+                    "relation": "shared_attention_count",
+                    "metadata": {
+                        "weight": 428
+                    }
+                },
+                {
+                    "source": "B",
+                    "target": "A",
+                    "directed": false,
+                    "relation": "shared_attention_count",
+                    "metadata": {
+                        "weight": 428
+                    }
+                },
+                {
+                    "source": "B",
+                    "target": "C",
+                    "directed": false,
+                    "relation": "shared_attention_count",
+                    "metadata": {
+                        "weight": 528
+                    }
+                },
+                {
+                    "source": "D",
+                    "target": "A",
+                    "directed": false,
+                    "relation": "shared_attention_count",
+                    "metadata": {
+                        "weight": 392
+                    }
+                },
+                {
+                    "source": "D",
+                    "target": "C",
+                    "directed": false,
+                    "relation": "shared_attention_count",
+                    "metadata": {
+                        "weight": 424
+                    }
+                },
+                {
+                    "source": "A",
+                    "target": "C",
+                    "directed": false,
+                    "relation": "shared_attention_count",
+                    "metadata": {
+                        "weight": 564
+                    }
+                }
+            ]
+        },
+        {
+            "id": "group-9-shared-attention-graph",
+            "directed": false,
+            "type": "undirected",
+            "label": "Shared Attention Graph - Group 9",
+            "nodes": {
+                "B": {
+                    "label": "Person B"
+                },
+                "D": {
+                    "label": "Person D"
+                },
+                "A": {
+                    "label": "Person A"
+                },
+                "C": {
+                    "label": "Person C"
+                }
+            },
+            "edges": [
+                {
+                    "source": "B",
+                    "target": "D",
+                    "directed": false,
+                    "relation": "shared_attention_count",
+                    "metadata": {
+                        "weight": 96
+                    }
+                },
+                {
+                    "source": "B",
+                    "target": "A",
+                    "directed": false,
+                    "relation": "shared_attention_count",
+                    "metadata": {
+                        "weight": 104
+                    }
+                },
+                {
+                    "source": "B",
+                    "target": "C",
+                    "directed": false,
+                    "relation": "shared_attention_count",
+                    "metadata": {
+                        "weight": 152
+                    }
+                },
+                {
+                    "source": "D",
+                    "target": "A",
+                    "directed": false,
+                    "relation": "shared_attention_count",
+                    "metadata": {
+                        "weight": 40
+                    }
+                },
+                {
+                    "source": "D",
+                    "target": "C",
+                    "directed": false,
+                    "relation": "shared_attention_count",
+                    "metadata": {
+                        "weight": 144
+                    }
+                },
+                {
+                    "source": "A",
+                    "target": "C",
+                    "directed": false,
+                    "relation": "shared_attention_count",
+                    "metadata": {
+                        "weight": 60
+                    }
+                }
+            ]
+        },
+        {
+            "id": "group-4-shared-attention-graph",
+            "directed": false,
+            "type": "undirected",
+            "label": "Shared Attention Graph - Group 4",
+            "nodes": {
+                "B": {
+                    "label": "Person B"
+                },
+                "D": {
+                    "label": "Person D"
+                },
+                "A": {
+                    "label": "Person A"
+                },
+                "C": {
+                    "label": "Person C"
+                }
+            },
+            "edges": [
+                {
+                    "source": "B",
+                    "target": "D",
+                    "directed": false,
+                    "relation": "shared_attention_count",
+                    "metadata": {
+                        "weight": 132
+                    }
+                },
+                {
+                    "source": "B",
+                    "target": "A",
+                    "directed": false,
+                    "relation": "shared_attention_count",
+                    "metadata": {
+                        "weight": 132
+                    }
+                },
+                {
+                    "source": "B",
+                    "target": "C",
+                    "directed": false,
+                    "relation": "shared_attention_count",
+                    "metadata": {
+                        "weight": 256
+                    }
+                },
+                {
+                    "source": "D",
+                    "target": "A",
+                    "directed": false,
+                    "relation": "shared_attention_count",
+                    "metadata": {
+                        "weight": 68
+                    }
+                },
+                {
+                    "source": "D",
+                    "target": "C",
+                    "directed": false,
+                    "relation": "shared_attention_count",
+                    "metadata": {
+                        "weight": 140
+                    }
+                },
+                {
+                    "source": "A",
+                    "target": "C",
+                    "directed": false,
+                    "relation": "shared_attention_count",
+                    "metadata": {
+                        "weight": 144
+                    }
+                }
+            ]
+        },
+        {
+            "id": "group-2-shared-attention-graph",
+            "directed": false,
+            "type": "undirected",
+            "label": "Shared Attention Graph - Group 2",
+            "nodes": {
+                "B": {
+                    "label": "Person B"
+                },
+                "D": {
+                    "label": "Person D"
+                },
+                "A": {
+                    "label": "Person A"
+                },
+                "C": {
+                    "label": "Person C"
+                }
+            },
+            "edges": [
+                {
+                    "source": "B",
+                    "target": "D",
+                    "directed": false,
+                    "relation": "shared_attention_count",
+                    "metadata": {
+                        "weight": 234
+                    }
+                },
+                {
+                    "source": "B",
+                    "target": "A",
+                    "directed": false,
+                    "relation": "shared_attention_count",
+                    "metadata": {
+                        "weight": 611
+                    }
+                },
+                {
+                    "source": "B",
+                    "target": "C",
+                    "directed": false,
+                    "relation": "shared_attention_count",
+                    "metadata": {
+                        "weight": 812
+                    }
+                },
+                {
+                    "source": "D",
+                    "target": "A",
+                    "directed": false,
+                    "relation": "shared_attention_count",
+                    "metadata": {
+                        "weight": 189
+                    }
+                },
+                {
+                    "source": "D",
+                    "target": "C",
+                    "directed": false,
+                    "relation": "shared_attention_count",
+                    "metadata": {
+                        "weight": 248
+                    }
+                },
+                {
+                    "source": "A",
+                    "target": "C",
+                    "directed": false,
+                    "relation": "shared_attention_count",
+                    "metadata": {
+                        "weight": 384
+                    }
+                }
+            ]
+        },
+        {
+            "id": "group-3-shared-attention-graph",
+            "directed": false,
+            "type": "undirected",
+            "label": "Shared Attention Graph - Group 3",
+            "nodes": {
+                "B": {
+                    "label": "Person B"
+                },
+                "D": {
+                    "label": "Person D"
+                },
+                "A": {
+                    "label": "Person A"
+                },
+                "C": {
+                    "label": "Person C"
+                }
+            },
+            "edges": [
+                {
+                    "source": "B",
+                    "target": "D",
+                    "directed": false,
+                    "relation": "shared_attention_count",
+                    "metadata": {
+                        "weight": 336
+                    }
+                },
+                {
+                    "source": "B",
+                    "target": "A",
+                    "directed": false,
+                    "relation": "shared_attention_count",
+                    "metadata": {
+                        "weight": 740
+                    }
+                },
+                {
+                    "source": "B",
+                    "target": "C",
+                    "directed": false,
+                    "relation": "shared_attention_count",
+                    "metadata": {
+                        "weight": 204
+                    }
+                },
+                {
+                    "source": "D",
+                    "target": "A",
+                    "directed": false,
+                    "relation": "shared_attention_count",
+                    "metadata": {
+                        "weight": 620
+                    }
+                },
+                {
+                    "source": "D",
+                    "target": "C",
+                    "directed": false,
+                    "relation": "shared_attention_count",
+                    "metadata": {
+                        "weight": 344
+                    }
+                },
+                {
+                    "source": "A",
+                    "target": "C",
+                    "directed": false,
+                    "relation": "shared_attention_count",
+                    "metadata": {
+                        "weight": 384
+                    }
+                }
+            ]
+        },
+        {
+            "id": "group-7-shared-attention-graph",
+            "directed": false,
+            "type": "undirected",
+            "label": "Shared Attention Graph - Group 7",
+            "nodes": {
+                "B": {
+                    "label": "Person B"
+                },
+                "D": {
+                    "label": "Person D"
+                },
+                "A": {
+                    "label": "Person A"
+                },
+                "C": {
+                    "label": "Person C"
+                }
+            },
+            "edges": [
+                {
+                    "source": "B",
+                    "target": "D",
+                    "directed": false,
+                    "relation": "shared_attention_count",
+                    "metadata": {
+                        "weight": 940
+                    }
+                },
+                {
+                    "source": "B",
+                    "target": "A",
+                    "directed": false,
+                    "relation": "shared_attention_count",
+                    "metadata": {
+                        "weight": 444
+                    }
+                },
+                {
+                    "source": "B",
+                    "target": "C",
+                    "directed": false,
+                    "relation": "shared_attention_count",
+                    "metadata": {
+                        "weight": 876
+                    }
+                },
+                {
+                    "source": "D",
+                    "target": "A",
+                    "directed": false,
+                    "relation": "shared_attention_count",
+                    "metadata": {
+                        "weight": 416
+                    }
+                },
+                {
+                    "source": "D",
+                    "target": "C",
+                    "directed": false,
+                    "relation": "shared_attention_count",
+                    "metadata": {
+                        "weight": 788
+                    }
+                },
+                {
+                    "source": "A",
+                    "target": "C",
+                    "directed": false,
+                    "relation": "shared_attention_count",
+                    "metadata": {
+                        "weight": 448
+                    }
+                }
+            ]
+        },
+        {
+            "id": "group-5-shared-attention-graph",
+            "directed": false,
+            "type": "undirected",
+            "label": "Shared Attention Graph - Group 5",
+            "nodes": {
+                "B": {
+                    "label": "Person B"
+                },
+                "D": {
+                    "label": "Person D"
+                },
+                "C": {
+                    "label": "Person C"
+                },
+                "A": {
+                    "label": "Person A"
+                }
+            },
+            "edges": [
+                {
+                    "source": "B",
+                    "target": "D",
+                    "directed": false,
+                    "relation": "shared_attention_count",
+                    "metadata": {
+                        "weight": 20
+                    }
+                },
+                {
+                    "source": "B",
+                    "target": "C",
+                    "directed": false,
+                    "relation": "shared_attention_count",
+                    "metadata": {
+                        "weight": 24
+                    }
+                },
+                {
+                    "source": "D",
+                    "target": "A",
+                    "directed": false,
+                    "relation": "shared_attention_count",
+                    "metadata": {
+                        "weight": 68
+                    }
+                },
+                {
+                    "source": "D",
+                    "target": "C",
+                    "directed": false,
+                    "relation": "shared_attention_count",
+                    "metadata": {
+                        "weight": 12
+                    }
+                },
+                {
+                    "source": "C",
+                    "target": "A",
+                    "directed": false,
+                    "relation": "shared_attention_count",
+                    "metadata": {
+                        "weight": 44
+                    }
+                }
+            ]
+        },
+        {
+            "id": "group-1-shared-attention-graph",
+            "directed": false,
+            "type": "undirected",
+            "label": "Shared Attention Graph - Group 1",
+            "nodes": {
+                "B": {
+                    "label": "Person B"
+                },
+                "D": {
+                    "label": "Person D"
+                },
+                "A": {
+                    "label": "Person A"
+                },
+                "C": {
+                    "label": "Person C"
+                }
+            },
+            "edges": [
+                {
+                    "source": "B",
+                    "target": "D",
+                    "directed": false,
+                    "relation": "shared_attention_count",
+                    "metadata": {
+                        "weight": 32
+                    }
+                },
+                {
+                    "source": "B",
+                    "target": "A",
+                    "directed": false,
+                    "relation": "shared_attention_count",
+                    "metadata": {
+                        "weight": 64
+                    }
+                },
+                {
+                    "source": "B",
+                    "target": "C",
+                    "directed": false,
+                    "relation": "shared_attention_count",
+                    "metadata": {
+                        "weight": 56
+                    }
+                },
+                {
+                    "source": "D",
+                    "target": "A",
+                    "directed": false,
+                    "relation": "shared_attention_count",
+                    "metadata": {
+                        "weight": 108
+                    }
+                },
+                {
+                    "source": "D",
+                    "target": "C",
+                    "directed": false,
+                    "relation": "shared_attention_count",
+                    "metadata": {
+                        "weight": 140
+                    }
+                },
+                {
+                    "source": "A",
+                    "target": "C",
+                    "directed": false,
+                    "relation": "shared_attention_count",
+                    "metadata": {
+                        "weight": 212
+                    }
+                }
+            ]
+        },
+        {
+            "id": "group-11-shared-attention-graph",
+            "directed": false,
+            "type": "undirected",
+            "label": "Shared Attention Graph - Group 11",
+            "nodes": {
+                "B": {
+                    "label": "Person B"
+                },
+                "D": {
+                    "label": "Person D"
+                },
+                "A": {
+                    "label": "Person A"
+                },
+                "C": {
+                    "label": "Person C"
+                }
+            },
+            "edges": [
+                {
+                    "source": "B",
+                    "target": "D",
+                    "directed": false,
+                    "relation": "shared_attention_count",
+                    "metadata": {
+                        "weight": 612
+                    }
+                },
+                {
+                    "source": "B",
+                    "target": "A",
+                    "directed": false,
+                    "relation": "shared_attention_count",
+                    "metadata": {
+                        "weight": 768
+                    }
+                },
+                {
+                    "source": "B",
+                    "target": "C",
+                    "directed": false,
+                    "relation": "shared_attention_count",
+                    "metadata": {
+                        "weight": 564
+                    }
+                },
+                {
+                    "source": "D",
+                    "target": "A",
+                    "directed": false,
+                    "relation": "shared_attention_count",
+                    "metadata": {
+                        "weight": 656
+                    }
+                },
+                {
+                    "source": "D",
+                    "target": "C",
+                    "directed": false,
+                    "relation": "shared_attention_count",
+                    "metadata": {
+                        "weight": 616
+                    }
+                },
+                {
+                    "source": "A",
+                    "target": "C",
+                    "directed": false,
+                    "relation": "shared_attention_count",
+                    "metadata": {
+                        "weight": 696
+                    }
+                }
+            ]
+        }
+    ]
+}

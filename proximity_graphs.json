@@ -1,0 +1,840 @@
+{
+    "graphs": [
+        {
+            "id": "group-10-proximity-graph",
+            "directed": false,
+            "type": "undirected",
+            "label": "Proximity Graph with Weights - Group 10",
+            "nodes": {
+                "A": {
+                    "label": "Person A"
+                },
+                "B": {
+                    "label": "Person B"
+                },
+                "C": {
+                    "label": "Person C"
+                },
+                "D": {
+                    "label": "Person D"
+                }
+            },
+            "edges": [
+                {
+                    "source": "A",
+                    "target": "B",
+                    "directed": false,
+                    "relation": "proximity_count",
+                    "metadata": {
+                        "weight": 328
+                    }
+                },
+                {
+                    "source": "A",
+                    "target": "C",
+                    "directed": false,
+                    "relation": "proximity_count",
+                    "metadata": {
+                        "weight": 185
+                    }
+                },
+                {
+                    "source": "A",
+                    "target": "D",
+                    "directed": false,
+                    "relation": "proximity_count",
+                    "metadata": {
+                        "weight": 150
+                    }
+                },
+                {
+                    "source": "B",
+                    "target": "C",
+                    "directed": false,
+                    "relation": "proximity_count",
+                    "metadata": {
+                        "weight": 256
+                    }
+                },
+                {
+                    "source": "B",
+                    "target": "D",
+                    "directed": false,
+                    "relation": "proximity_count",
+                    "metadata": {
+                        "weight": 318
+                    }
+                },
+                {
+                    "source": "C",
+                    "target": "D",
+                    "directed": false,
+                    "relation": "proximity_count",
+                    "metadata": {
+                        "weight": 344
+                    }
+                }
+            ]
+        },
+        {
+            "id": "group-8-proximity-graph",
+            "directed": false,
+            "type": "undirected",
+            "label": "Proximity Graph with Weights - Group 8",
+            "nodes": {
+                "A": {
+                    "label": "Person A"
+                },
+                "B": {
+                    "label": "Person B"
+                },
+                "C": {
+                    "label": "Person C"
+                },
+                "D": {
+                    "label": "Person D"
+                }
+            },
+            "edges": [
+                {
+                    "source": "A",
+                    "target": "B",
+                    "directed": false,
+                    "relation": "proximity_count",
+                    "metadata": {
+                        "weight": 862
+                    }
+                },
+                {
+                    "source": "A",
+                    "target": "C",
+                    "directed": false,
+                    "relation": "proximity_count",
+                    "metadata": {
+                        "weight": 31
+                    }
+                },
+                {
+                    "source": "A",
+                    "target": "D",
+                    "directed": false,
+                    "relation": "proximity_count",
+                    "metadata": {
+                        "weight": 906
+                    }
+                },
+                {
+                    "source": "B",
+                    "target": "C",
+                    "directed": false,
+                    "relation": "proximity_count",
+                    "metadata": {
+                        "weight": 15
+                    }
+                },
+                {
+                    "source": "B",
+                    "target": "D",
+                    "directed": false,
+                    "relation": "proximity_count",
+                    "metadata": {
+                        "weight": 715
+                    }
+                },
+                {
+                    "source": "C",
+                    "target": "D",
+                    "directed": false,
+                    "relation": "proximity_count",
+                    "metadata": {
+                        "weight": 173
+                    }
+                }
+            ]
+        },
+        {
+            "id": "group-6-proximity-graph",
+            "directed": false,
+            "type": "undirected",
+            "label": "Proximity Graph with Weights - Group 6",
+            "nodes": {
+                "A": {
+                    "label": "Person A"
+                },
+                "B": {
+                    "label": "Person B"
+                },
+                "C": {
+                    "label": "Person C"
+                },
+                "D": {
+                    "label": "Person D"
+                }
+            },
+            "edges": [
+                {
+                    "source": "A",
+                    "target": "B",
+                    "directed": false,
+                    "relation": "proximity_count",
+                    "metadata": {
+                        "weight": 249
+                    }
+                },
+                {
+                    "source": "A",
+                    "target": "C",
+                    "directed": false,
+                    "relation": "proximity_count",
+                    "metadata": {
+                        "weight": 312
+                    }
+                },
+                {
+                    "source": "A",
+                    "target": "D",
+                    "directed": false,
+                    "relation": "proximity_count",
+                    "metadata": {
+                        "weight": 398
+                    }
+                },
+                {
+                    "source": "B",
+                    "target": "C",
+                    "directed": false,
+                    "relation": "proximity_count",
+                    "metadata": {
+                        "weight": 96
+                    }
+                },
+                {
+                    "source": "B",
+                    "target": "D",
+                    "directed": false,
+                    "relation": "proximity_count",
+                    "metadata": {
+                        "weight": 662
+                    }
+                },
+                {
+                    "source": "C",
+                    "target": "D",
+                    "directed": false,
+                    "relation": "proximity_count",
+                    "metadata": {
+                        "weight": 18
+                    }
+                }
+            ]
+        },
+        {
+            "id": "group-9-proximity-graph",
+            "directed": false,
+            "type": "undirected",
+            "label": "Proximity Graph with Weights - Group 9",
+            "nodes": {
+                "A": {
+                    "label": "Person A"
+                },
+                "B": {
+                    "label": "Person B"
+                },
+                "C": {
+                    "label": "Person C"
+                },
+                "D": {
+                    "label": "Person D"
+                }
+            },
+            "edges": [
+                {
+                    "source": "A",
+                    "target": "B",
+                    "directed": false,
+                    "relation": "proximity_count",
+                    "metadata": {
+                        "weight": 113
+                    }
+                },
+                {
+                    "source": "A",
+                    "target": "C",
+                    "directed": false,
+                    "relation": "proximity_count",
+                    "metadata": {
+                        "weight": 127
+                    }
+                },
+                {
+                    "source": "A",
+                    "target": "D",
+                    "directed": false,
+                    "relation": "proximity_count",
+                    "metadata": {
+                        "weight": 180
+                    }
+                },
+                {
+                    "source": "B",
+                    "target": "C",
+                    "directed": false,
+                    "relation": "proximity_count",
+                    "metadata": {
+                        "weight": 58
+                    }
+                },
+                {
+                    "source": "B",
+                    "target": "D",
+                    "directed": false,
+                    "relation": "proximity_count",
+                    "metadata": {
+                        "weight": 137
+                    }
+                },
+                {
+                    "source": "C",
+                    "target": "D",
+                    "directed": false,
+                    "relation": "proximity_count",
+                    "metadata": {
+                        "weight": 170
+                    }
+                }
+            ]
+        },
+        {
+            "id": "group-4-proximity-graph",
+            "directed": false,
+            "type": "undirected",
+            "label": "Proximity Graph with Weights - Group 4",
+            "nodes": {
+                "A": {
+                    "label": "Person A"
+                },
+                "B": {
+                    "label": "Person B"
+                },
+                "C": {
+                    "label": "Person C"
+                },
+                "D": {
+                    "label": "Person D"
+                }
+            },
+            "edges": [
+                {
+                    "source": "A",
+                    "target": "B",
+                    "directed": false,
+                    "relation": "proximity_count",
+                    "metadata": {
+                        "weight": 155
+                    }
+                },
+                {
+                    "source": "A",
+                    "target": "C",
+                    "directed": false,
+                    "relation": "proximity_count",
+                    "metadata": {
+                        "weight": 164
+                    }
+                },
+                {
+                    "source": "A",
+                    "target": "D",
+                    "directed": false,
+                    "relation": "proximity_count",
+                    "metadata": {
+                        "weight": 158
+                    }
+                },
+                {
+                    "source": "B",
+                    "target": "C",
+                    "directed": false,
+                    "relation": "proximity_count",
+                    "metadata": {
+                        "weight": 193
+                    }
+                },
+                {
+                    "source": "B",
+                    "target": "D",
+                    "directed": false,
+                    "relation": "proximity_count",
+                    "metadata": {
+                        "weight": 162
+                    }
+                },
+                {
+                    "source": "C",
+                    "target": "D",
+                    "directed": false,
+                    "relation": "proximity_count",
+                    "metadata": {
+                        "weight": 86
+                    }
+                }
+            ]
+        },
+        {
+            "id": "group-2-proximity-graph",
+            "directed": false,
+            "type": "undirected",
+            "label": "Proximity Graph with Weights - Group 2",
+            "nodes": {
+                "A": {
+                    "label": "Person A"
+                },
+                "B": {
+                    "label": "Person B"
+                },
+                "C": {
+                    "label": "Person C"
+                },
+                "D": {
+                    "label": "Person D"
+                }
+            },
+            "edges": [
+                {
+                    "source": "A",
+                    "target": "B",
+                    "directed": false,
+                    "relation": "proximity_count",
+                    "metadata": {
+                        "weight": 78
+                    }
+                },
+                {
+                    "source": "A",
+                    "target": "C",
+                    "directed": false,
+                    "relation": "proximity_count",
+                    "metadata": {
+                        "weight": 58
+                    }
+                },
+                {
+                    "source": "A",
+                    "target": "D",
+                    "directed": false,
+                    "relation": "proximity_count",
+                    "metadata": {
+                        "weight": 101
+                    }
+                },
+                {
+                    "source": "B",
+                    "target": "C",
+                    "directed": false,
+                    "relation": "proximity_count",
+                    "metadata": {
+                        "weight": 160
+                    }
+                },
+                {
+                    "source": "B",
+                    "target": "D",
+                    "directed": false,
+                    "relation": "proximity_count",
+                    "metadata": {
+                        "weight": 30
+                    }
+                },
+                {
+                    "source": "C",
+                    "target": "D",
+                    "directed": false,
+                    "relation": "proximity_count",
+                    "metadata": {
+                        "weight": 157
+                    }
+                }
+            ]
+        },
+        {
+            "id": "group-3-proximity-graph",
+            "directed": false,
+            "type": "undirected",
+            "label": "Proximity Graph with Weights - Group 3",
+            "nodes": {
+                "A": {
+                    "label": "Person A"
+                },
+                "B": {
+                    "label": "Person B"
+                },
+                "C": {
+                    "label": "Person C"
+                },
+                "D": {
+                    "label": "Person D"
+                }
+            },
+            "edges": [
+                {
+                    "source": "A",
+                    "target": "B",
+                    "directed": false,
+                    "relation": "proximity_count",
+                    "metadata": {
+                        "weight": 301
+                    }
+                },
+                {
+                    "source": "A",
+                    "target": "C",
+                    "directed": false,
+                    "relation": "proximity_count",
+                    "metadata": {
+                        "weight": 91
+                    }
+                },
+                {
+                    "source": "A",
+                    "target": "D",
+                    "directed": false,
+                    "relation": "proximity_count",
+                    "metadata": {
+                        "weight": 242
+                    }
+                },
+                {
+                    "source": "B",
+                    "target": "C",
+                    "directed": false,
+                    "relation": "proximity_count",
+                    "metadata": {
+                        "weight": 92
+                    }
+                },
+                {
+                    "source": "B",
+                    "target": "D",
+                    "directed": false,
+                    "relation": "proximity_count",
+                    "metadata": {
+                        "weight": 135
+                    }
+                },
+                {
+                    "source": "C",
+                    "target": "D",
+                    "directed": false,
+                    "relation": "proximity_count",
+                    "metadata": {
+                        "weight": 190
+                    }
+                }
+            ]
+        },
+        {
+            "id": "group-7-proximity-graph",
+            "directed": false,
+            "type": "undirected",
+            "label": "Proximity Graph with Weights - Group 7",
+            "nodes": {
+                "A": {
+                    "label": "Person A"
+                },
+                "B": {
+                    "label": "Person B"
+                },
+                "C": {
+                    "label": "Person C"
+                },
+                "D": {
+                    "label": "Person D"
+                }
+            },
+            "edges": [
+                {
+                    "source": "A",
+                    "target": "B",
+                    "directed": false,
+                    "relation": "proximity_count",
+                    "metadata": {
+                        "weight": 309
+                    }
+                },
+                {
+                    "source": "A",
+                    "target": "C",
+                    "directed": false,
+                    "relation": "proximity_count",
+                    "metadata": {
+                        "weight": 120
+                    }
+                },
+                {
+                    "source": "A",
+                    "target": "D",
+                    "directed": false,
+                    "relation": "proximity_count",
+                    "metadata": {
+                        "weight": 215
+                    }
+                },
+                {
+                    "source": "B",
+                    "target": "C",
+                    "directed": false,
+                    "relation": "proximity_count",
+                    "metadata": {
+                        "weight": 61
+                    }
+                },
+                {
+                    "source": "B",
+                    "target": "D",
+                    "directed": false,
+                    "relation": "proximity_count",
+                    "metadata": {
+                        "weight": 210
+                    }
+                },
+                {
+                    "source": "C",
+                    "target": "D",
+                    "directed": false,
+                    "relation": "proximity_count",
+                    "metadata": {
+                        "weight": 298
+                    }
+                }
+            ]
+        },
+        {
+            "id": "group-5-proximity-graph",
+            "directed": false,
+            "type": "undirected",
+            "label": "Proximity Graph with Weights - Group 5",
+            "nodes": {
+                "A": {
+                    "label": "Person A"
+                },
+                "B": {
+                    "label": "Person B"
+                },
+                "C": {
+                    "label": "Person C"
+                },
+                "D": {
+                    "label": "Person D"
+                }
+            },
+            "edges": [
+                {
+                    "source": "A",
+                    "target": "B",
+                    "directed": false,
+                    "relation": "proximity_count",
+                    "metadata": {
+                        "weight": 91
+                    }
+                },
+                {
+                    "source": "A",
+                    "target": "C",
+                    "directed": false,
+                    "relation": "proximity_count",
+                    "metadata": {
+                        "weight": 59
+                    }
+                },
+                {
+                    "source": "A",
+                    "target": "D",
+                    "directed": false,
+                    "relation": "proximity_count",
+                    "metadata": {
+                        "weight": 145
+                    }
+                },
+                {
+                    "source": "B",
+                    "target": "C",
+                    "directed": false,
+                    "relation": "proximity_count",
+                    "metadata": {
+                        "weight": 17
+                    }
+                },
+                {
+                    "source": "B",
+                    "target": "D",
+                    "directed": false,
+                    "relation": "proximity_count",
+                    "metadata": {
+                        "weight": 108
+                    }
+                },
+                {
+                    "source": "C",
+                    "target": "D",
+                    "directed": false,
+                    "relation": "proximity_count",
+                    "metadata": {
+                        "weight": 53
+                    }
+                }
+            ]
+        },
+        {
+            "id": "group-1-proximity-graph",
+            "directed": false,
+            "type": "undirected",
+            "label": "Proximity Graph with Weights - Group 1",
+            "nodes": {
+                "A": {
+                    "label": "Person A"
+                },
+                "B": {
+                    "label": "Person B"
+                },
+                "C": {
+                    "label": "Person C"
+                },
+                "D": {
+                    "label": "Person D"
+                }
+            },
+            "edges": [
+                {
+                    "source": "A",
+                    "target": "B",
+                    "directed": false,
+                    "relation": "proximity_count",
+                    "metadata": {
+                        "weight": 196
+                    }
+                },
+                {
+                    "source": "A",
+                    "target": "C",
+                    "directed": false,
+                    "relation": "proximity_count",
+                    "metadata": {
+                        "weight": 196
+                    }
+                },
+                {
+                    "source": "A",
+                    "target": "D",
+                    "directed": false,
+                    "relation": "proximity_count",
+                    "metadata": {
+                        "weight": 130
+                    }
+                },
+                {
+                    "source": "B",
+                    "target": "C",
+                    "directed": false,
+                    "relation": "proximity_count",
+                    "metadata": {
+                        "weight": 283
+                    }
+                },
+                {
+                    "source": "B",
+                    "target": "D",
+                    "directed": false,
+                    "relation": "proximity_count",
+                    "metadata": {
+                        "weight": 135
+                    }
+                },
+                {
+                    "source": "C",
+                    "target": "D",
+                    "directed": false,
+                    "relation": "proximity_count",
+                    "metadata": {
+                        "weight": 179
+                    }
+                }
+            ]
+        },
+        {
+            "id": "group-11-proximity-graph",
+            "directed": false,
+            "type": "undirected",
+            "label": "Proximity Graph with Weights - Group 11",
+            "nodes": {
+                "A": {
+                    "label": "Person A"
+                },
+                "B": {
+                    "label": "Person B"
+                },
+                "C": {
+                    "label": "Person C"
+                },
+                "D": {
+                    "label": "Person D"
+                }
+            },
+            "edges": [
+                {
+                    "source": "A",
+                    "target": "B",
+                    "directed": false,
+                    "relation": "proximity_count",
+                    "metadata": {
+                        "weight": 30
+                    }
+                },
+                {
+                    "source": "A",
+                    "target": "C",
+                    "directed": false,
+                    "relation": "proximity_count",
+                    "metadata": {
+                        "weight": 54
+                    }
+                },
+                {
+                    "source": "A",
+                    "target": "D",
+                    "directed": false,
+                    "relation": "proximity_count",
+                    "metadata": {
+                        "weight": 270
+                    }
+                },
+                {
+                    "source": "B",
+                    "target": "C",
+                    "directed": false,
+                    "relation": "proximity_count",
+                    "metadata": {
+                        "weight": 295
+                    }
+                },
+                {
+                    "source": "B",
+                    "target": "D",
+                    "directed": false,
+                    "relation": "proximity_count",
+                    "metadata": {
+                        "weight": 65
+                    }
+                },
+                {
+                    "source": "C",
+                    "target": "D",
+                    "directed": false,
+                    "relation": "proximity_count",
+                    "metadata": {
+                        "weight": 18
+                    }
+                }
+            ]
+        }
+    ]
+}
