@@ -5,6 +5,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 import pandas as pd
+from sklearn.linear_model import LinearRegression
 
 def extract_group_number(graph_id):
     match = re.search(r'group-(\d+)', graph_id)
@@ -58,6 +59,54 @@ def visualize_cluster_results(group_list):
         # plt.legend()
         # plt.show()
         plt.savefig("cluster_results/group"+str(i+1)+".png")
+
+def regression(leader_ratio_list, acc, time, efficiency):
+    x = np.array(leader_ratio_list).reshape(-1, 1)
+    acc = np.array(acc)
+    time = np.array(time)
+    efficiency = np.array(efficiency)
+
+    model = LinearRegression()
+    model_1 = LinearRegression()
+    model_2 = LinearRegression()
+    model.fit(x, acc)
+    model_1.fit(x, time)
+    model_2.fit(x, efficiency)
+    
+    slope = model.coef_[0]
+    intercept = model.intercept_
+    print(f"Slope: {slope}, Intercept: {intercept}")
+
+    acc_pred = model.predict(x)
+    time_pred = model_1.predict(x)
+    efficiency_pred = model_2.predict(x)
+
+    plt.figure(1)
+    plt.xticks([0,0.25,0.5,0.75,1])
+    plt.xlabel("leader ratio")
+    plt.ylabel("accuracy(%)")
+    plt.scatter(x, acc, label="Data points")  
+    plt.plot(x, acc_pred, color='r', label="Regression line")  
+    plt.legend()
+    plt.savefig("regression_results/accuracy_regression.png")
+
+    plt.figure(2)
+    plt.xticks([0,0.25,0.5,0.75,1])
+    plt.xlabel("leader ratio")
+    plt.ylabel("complete time(s)")
+    plt.scatter(x, time, label="Data points")  
+    plt.plot(x, time_pred, color='r', label="Regression line") 
+    plt.legend()
+    plt.savefig("regression_results/time_regression.png")
+
+    plt.figure(3)
+    plt.xticks([0,0.25,0.5,0.75,1])
+    plt.xlabel("leader ratio")
+    plt.ylabel("efficiency(accuracy/time)")
+    plt.scatter(x, efficiency, label="Data points")  
+    plt.plot(x, efficiency_pred, color='r', label="Regression line") 
+    plt.legend()
+    plt.savefig("regression_results/efficiency_regression.png")
 
 
 json_file_list = ["proximity_graphs.json","conversation_graphs.json", "shared_attention_graphs.json"]
@@ -121,10 +170,10 @@ for i in range(len(df["Completion Time"])):
     total_sec = int(match_min.group(1)) * 60 + eval(match_sec.group(1))
     complete_time.append(total_sec)
 complete_time = np.array(complete_time)
-effciency = []
+efficiency = []
 
 for i in range(len(complete_time)):
-    effciency.append(accuracy[i]/complete_time[i])
+    efficiency.append(accuracy[i]/complete_time[i])
 
 print(complete_time)
 print(accuracy)
@@ -135,19 +184,21 @@ plt.scatter(leader_ratio_list, accuracy)
 plt.xticks([0,0.25,0.5,0.75,1])
 plt.xlabel("leader ratio")
 plt.ylabel("accuracy(%)")
-plt.savefig("accuracy.png")
+plt.savefig("regression_results/accuracy.png")
 
 plt.figure(2)
 plt.scatter(leader_ratio_list, complete_time)
 plt.xticks([0,0.25,0.5,0.75,1])
 plt.xlabel("leader ratio")
 plt.ylabel("complete time(s)")
-plt.savefig("time.png")
+plt.savefig("regression_results/time.png")
 
 plt.figure(3)
-plt.scatter(leader_ratio_list, effciency)
+plt.scatter(leader_ratio_list, efficiency)
 plt.xticks([0,0.25,0.5,0.75,1])
 plt.xlabel("leader ratio")
-plt.ylabel("effciency (accuracy/time)")
-plt.savefig("effciency.png")
+plt.ylabel("efficiency (accuracy/time)")
+plt.savefig("regression_results/efficiency.png")
+
 # plt.show()
+regression(leader_ratio_list, accuracy, complete_time, efficiency)
