@@ -4,6 +4,7 @@ import re
 import numpy as np
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
+import pandas as pd
 
 def extract_group_number(graph_id):
     match = re.search(r'group-(\d+)', graph_id)
@@ -28,11 +29,35 @@ def get_weight(json_file, normalize = False):
             group_weight[node_index[source]] = round(group_weight[node_index[source]] + weight,3)
             group_weight[node_index[target]] = round(group_weight[node_index[target]] + weight,3)
         if normalize:
-            group_weight = group_weight/np.max(group_weight)
+            group_weight = group_weight/np.sum(group_weight)
         edge_list.append(group_weight)
 
     return edge_list
 
+def visualize_cluster_results(group_list):
+    for i in range(len(group_list)):
+        X = np.array(group_list[i])
+
+        colors = ['red', 'blue']
+        mapped_colors = [colors[label] for label in cluster_labels[i]]
+        fig = plt.figure()
+        ax = fig.add_subplot(111, projection='3d')
+        ax.scatter(X[:, 0], X[:, 1], X[:, 2], c=mapped_colors, label='Data Points')
+        ax.set_xlim(np.min(X[:, 0]),np.max(X[:, 0]))
+        ax.set_ylim(np.min(X[:, 1]),np.max(X[:, 1]))
+        ax.set_zlim(np.min(X[:, 2]),np.max(X[:, 2]))
+
+        ax.set_zlabel('proximity', fontdict = {"size":15, 'color': 'red'})
+        ax.set_ylabel('conversation', fontdict = {"size":15, 'color': 'red'})
+        ax.set_xlabel('attention', fontdict = {"size":15, 'color': 'red'})
+        ax.set_xticks([0, 0.25, 0.5, 0.75, 1]) 
+        ax.set_yticks([0, 0.25, 0.5, 0.75, 1])             
+        ax.set_zticks([0, 0.25, 0.5, 0.75, 1])      
+
+        # ax.scatter(kmeans.cluster_centers_[:, 0], kmeans.cluster_centers_[:, 1], kmeans.cluster_centers_[:, 2], c='red', marker='x', label='Cluster Centers')
+        # plt.legend()
+        # plt.show()
+        plt.savefig("cluster_results/group"+str(i+1)+".png")
 
 
 json_file_list = ["proximity_graphs.json","conversation_graphs.json", "shared_attention_graphs.json"]
@@ -62,22 +87,67 @@ for group in group_list:
     centers.append(kmeans.cluster_centers_)
     inertia.append(kmeans.inertia_)
 
-for i in range(len(group_list)):
-    X = np.array(group_list[i])
+# visualize_cluster_results(group_list)
+print(cluster_labels)
+print(centers)
+# figure out which cluster is leader and supporter
 
-    colors = ['red', 'blue']
-    mapped_colors = [colors[label] for label in cluster_labels[i]]
-    fig = plt.figure()
-    ax = fig.add_subplot(111, projection='3d')
-    ax.scatter(X[:, 0], X[:, 1], X[:, 2], c=mapped_colors, label='Data Points')
-    ax.set_xlim(np.min(X[:, 0]),np.max(X[:, 0]))
-    ax.set_ylim(np.min(X[:, 1]),np.max(X[:, 1]))
-    ax.set_zlim(np.min(X[:, 2]),np.max(X[:, 2]))
+leader_ratio_list = []
 
-    ax.set_zlabel('proximity', fontdict = {"size":15, 'color': 'red'})
-    ax.set_ylabel('conversation', fontdict = {"size":15, 'color': 'red'})
-    ax.set_xlabel('attention', fontdict = {"size":15, 'color': 'red'})
-    # ax.scatter(kmeans.cluster_centers_[:, 0], kmeans.cluster_centers_[:, 1], kmeans.cluster_centers_[:, 2], c='red', marker='x', label='Cluster Centers')
-    # plt.legend()
-    # plt.show()
-    plt.savefig("cluster_results/group"+str(i+1)+".png")
+for i in range(len(cluster_labels)):
+    label_1 = np.count_nonzero(cluster_labels[i])
+    label_0 = 4 - label_1
+    count = 0
+    if centers[i][0][0] > centers[i][1][0]:
+        count = count + 1
+    if centers[i][0][1] > centers[i][1][1]:
+        count = count + 1
+    if centers[i][0][2] > centers[i][1][2]:
+        count = count + 1
+
+    if count >= 2: # label 0 is leader
+        leader_ratio_list.append(label_0/4)
+    else: # label 1 is leader
+        leader_ratio_list.append(label_1/4)
+
+df = pd.read_csv('completion_time_and_accuracy.csv')
+data = df.to_numpy()
+accuracy = np.array(df["Accuracy (%)"])
+complete_time = []
+for i in range(len(df["Completion Time"])):
+    time = df["Completion Time"][i]
+    match_min = re.search(r'\d{2}:(\d{2}):\d{2}\.\d+', time)
+    match_sec = re.search(r'\d{2}:\d{2}:(\d{2}\.\d+)', time)
+    total_sec = int(match_min.group(1)) * 60 + eval(match_sec.group(1))
+    complete_time.append(total_sec)
+complete_time = np.array(complete_time)
+effciency = []
+
+for i in range(len(complete_time)):
+    effciency.append(accuracy[i]/complete_time[i])
+
+print(complete_time)
+print(accuracy)
+print(leader_ratio_list)
+
+plt.figure(1)
+plt.scatter(leader_ratio_list, accuracy)
+plt.xticks([0,0.25,0.5,0.75,1])
+plt.xlabel("leader ratio")
+plt.ylabel("accuracy(%)")
+plt.savefig("accuracy.png")
+
+plt.figure(2)
+plt.scatter(leader_ratio_list, complete_time)
+plt.xticks([0,0.25,0.5,0.75,1])
+plt.xlabel("leader ratio")
+plt.ylabel("complete time(s)")
+plt.savefig("time.png")
+
+plt.figure(3)
+plt.scatter(leader_ratio_list, effciency)
+plt.xticks([0,0.25,0.5,0.75,1])
+plt.xlabel("leader ratio")
+plt.ylabel("effciency (accuracy/time)")
+plt.savefig("effciency.png")
+# plt.show()
