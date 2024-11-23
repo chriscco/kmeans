@@ -36,6 +36,7 @@ def get_weight(json_file, normalize = False):
     return edge_list
 
 def visualize_cluster_results(group_list):
+    group_array = np.array(group_list)
     for i in range(len(group_list)):
         X = np.array(group_list[i])
 
@@ -44,16 +45,14 @@ def visualize_cluster_results(group_list):
         fig = plt.figure()
         ax = fig.add_subplot(111, projection='3d')
         ax.scatter(X[:, 0], X[:, 1], X[:, 2], c=mapped_colors, label='Data Points')
-        ax.set_xlim(np.min(X[:, 0]),np.max(X[:, 0]))
-        ax.set_ylim(np.min(X[:, 1]),np.max(X[:, 1]))
-        ax.set_zlim(np.min(X[:, 2]),np.max(X[:, 2]))
+        ax.set_xlim(np.min(group_array[:,:, 0]),np.max(group_array[:,:, 0]))
+        ax.set_ylim(np.min(group_array[:,:, 1]),np.max(group_array[:,:, 1]))
+        ax.set_zlim(np.min(group_array[:,:, 2]),np.max(group_array[:,:, 2]))
+        
 
         ax.set_zlabel('proximity', fontdict = {"size":15, 'color': 'red'})
         ax.set_ylabel('conversation', fontdict = {"size":15, 'color': 'red'})
-        ax.set_xlabel('attention', fontdict = {"size":15, 'color': 'red'})
-        ax.set_xticks([0, 0.25, 0.5, 0.75, 1]) 
-        ax.set_yticks([0, 0.25, 0.5, 0.75, 1])             
-        ax.set_zticks([0, 0.25, 0.5, 0.75, 1])      
+        ax.set_xlabel('attention', fontdict = {"size":15, 'color': 'red'})               
 
         # ax.scatter(kmeans.cluster_centers_[:, 0], kmeans.cluster_centers_[:, 1], kmeans.cluster_centers_[:, 2], c='red', marker='x', label='Cluster Centers')
         # plt.legend()
@@ -81,11 +80,12 @@ def regression(leader_ratio_list, acc, time, efficiency):
     time_pred = model_1.predict(x)
     efficiency_pred = model_2.predict(x)
 
+    
     plt.figure(1)
     plt.xticks([0,0.25,0.5,0.75,1])
     plt.xlabel("leader ratio")
     plt.ylabel("accuracy(%)")
-    plt.scatter(x, acc, label="Data points")  
+    plt.scatter(x, acc, s = 50, label="Data points")  
     plt.plot(x, acc_pred, color='r', label="Regression line")  
     plt.legend()
     plt.savefig("regression_results/accuracy_regression.png")
@@ -137,8 +137,8 @@ for group in group_list:
     inertia.append(kmeans.inertia_)
 
 # visualize_cluster_results(group_list)
-print(cluster_labels)
-print(centers)
+# print(cluster_labels)
+# print(centers)
 # figure out which cluster is leader and supporter
 
 leader_ratio_list = []
@@ -175,30 +175,31 @@ efficiency = []
 for i in range(len(complete_time)):
     efficiency.append(accuracy[i]/complete_time[i])
 
-print(complete_time)
-print(accuracy)
-print(leader_ratio_list)
+# print(complete_time)
+# print(accuracy)
+# print(leader_ratio_list)
 
-plt.figure(1)
-plt.scatter(leader_ratio_list, accuracy)
-plt.xticks([0,0.25,0.5,0.75,1])
-plt.xlabel("leader ratio")
-plt.ylabel("accuracy(%)")
-plt.savefig("regression_results/accuracy.png")
+# plt.figure(1)
+# plt.scatter(leader_ratio_list, accuracy)
+# plt.xticks([0,0.25,0.5,0.75,1])
+# plt.xlabel("leader ratio")
+# plt.ylabel("accuracy(%)")
+# plt.savefig("regression_results/accuracy.png")
 
-plt.figure(2)
-plt.scatter(leader_ratio_list, complete_time)
-plt.xticks([0,0.25,0.5,0.75,1])
-plt.xlabel("leader ratio")
-plt.ylabel("complete time(s)")
-plt.savefig("regression_results/time.png")
+# plt.figure(2)
+# plt.scatter(leader_ratio_list, complete_time)
+# plt.xticks([0,0.25,0.5,0.75,1])
+# plt.xlabel("leader ratio")
+# plt.ylabel("complete time(s)")
+# plt.savefig("regression_results/time.png")
 
-plt.figure(3)
-plt.scatter(leader_ratio_list, efficiency)
-plt.xticks([0,0.25,0.5,0.75,1])
-plt.xlabel("leader ratio")
-plt.ylabel("efficiency (accuracy/time)")
-plt.savefig("regression_results/efficiency.png")
+# plt.figure(3)
+# plt.scatter(leader_ratio_list, efficiency)
+# plt.xticks([0,0.25,0.5,0.75,1])
+# plt.xlabel("leader ratio")
+# plt.ylabel("efficiency (accuracy/time)")
+# plt.savefig("regression_results/efficiency.png")
 
 # plt.show()
+# plt.close()
 regression(leader_ratio_list, accuracy, complete_time, efficiency)
